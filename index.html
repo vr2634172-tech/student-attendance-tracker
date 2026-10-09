@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Attendance Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="tag">STUDENT PROJECT</p>
+      <h1>Attendance Tracker</h1>
+      <p class="sub">A simple way to record daily attendance.</p>
+    </header>
+
+    <form id="studentForm" class="add-form">
+      <label class="sr-only" for="studentName">Student name</label>
+      <input id="studentName" type="text" placeholder="Enter student name" maxlength="60" required>
+      <button type="submit">Add Student</button>
+    </form>
+
+    <section class="stats" aria-label="Attendance summary">
+      <div><span id="totalCount">0</span><small>Total</small></div>
+      <div><span id="presentCount">0</span><small>Present</small></div>
+      <div><span id="absentCount">0</span><small>Absent</small></div>
+      <div><span id="percentage">0%</span><small>Present rate</small></div>
+    </section>
+
+    <section class="list-section">
+      <div class="list-heading">
+        <h2>Student List</h2>
+        <button id="resetButton" class="secondary" type="button">Reset Attendance</button>
+      </div>
+      <p id="emptyMessage" class="empty">No students yet. Add a student above to begin.</p>
+      <ul id="studentList"></ul>
+    </section>
+    <footer>HTML · CSS · JavaScript · Browser local storage</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

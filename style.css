@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+:root { font-family: Inter, Arial, sans-serif; color: #172033; background: #f1f5fb; }
+body { margin: 0; padding: 28px 16px; min-height: 100vh; }
+.app { max-width: 850px; margin: 0 auto; background: white; border-radius: 22px; padding: clamp(22px, 5vw, 42px); box-shadow: 0 16px 45px rgba(23, 32, 51, .09); }
+header { text-align: center; margin-bottom: 28px; }
+.tag { color: #2769c7; font-size: .75rem; font-weight: 800; letter-spacing: .16em; }
+h1 { margin: 8px 0; font-size: clamp(2rem, 6vw, 2.8rem); }
+.sub { color: #68758b; }
+.add-form { display: flex; gap: 10px; }
+input { min-width: 0; flex: 1; padding: 14px; border: 1px solid #d7dfeb; border-radius: 11px; font-size: 1rem; }
+button { border: 0; border-radius: 11px; padding: 13px 17px; color: white; background: #2769c7; font-weight: 700; cursor: pointer; }
+button:hover { filter: brightness(.94); }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0 32px; }
+.stats div { display: grid; gap: 6px; padding: 17px 10px; text-align: center; border-radius: 13px; background: #f4f7fc; }
+.stats span { font-size: 1.7rem; font-weight: 800; }
+.stats small { color: #68758b; }
+.list-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+h2 { font-size: 1.2rem; }
+.secondary { color: #3d4b63; background: #e9eef6; padding: 10px 12px; }
+#studentList { list-style: none; padding: 0; margin: 0; }
+.student { display: flex; align-items: center; gap: 10px; padding: 13px 0; border-bottom: 1px solid #edf0f5; }
+.student-name { flex: 1; overflow-wrap: anywhere; }
+.student button { padding: 9px 11px; }
+.present { background: #21845a; }
+.absent { background: #b54747; }
+.remove { background: #e9eef6; color: #3d4b63; }
+.empty { color: #7a8498; text-align: center; padding: 22px 0; }
+footer { text-align: center; color: #7a8498; font-size: .8rem; margin-top: 28px; padding-top: 18px; border-top: 1px solid #edf0f5; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 600px) { .add-form { flex-direction: column; } .stats { grid-template-columns: repeat(2, 1fr); } .student { flex-wrap: wrap; } .student-name { flex-basis: 100%; } .list-heading { align-items: flex-start; } }
